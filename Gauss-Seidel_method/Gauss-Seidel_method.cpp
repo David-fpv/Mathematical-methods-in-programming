@@ -42,7 +42,7 @@ int main()
     {
         if (!isDiagonalElementMoreSumOther(i, expanded_matrix[i], m))
         {
-            for (int j = i + 1; j < m; j++)
+            for (int j = i; j < m; j++)
             {
                 if (isDiagonalElementMoreSumOther(i, expanded_matrix[j], m))// changed i to j in fitst argument
                 {
