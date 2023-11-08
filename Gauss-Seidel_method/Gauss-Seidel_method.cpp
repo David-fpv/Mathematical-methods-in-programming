@@ -58,8 +58,6 @@ int main()
         }
     }
 
-    showMatrix(m, n, expanded_matrix);
-
     for (int i = 0; i < m; i++) // divide each row in the matrix by an element of this row, which stands in the main diagonal
     {
         float divider = expanded_matrix[i][i];
@@ -99,8 +97,8 @@ int main()
         // Сhecking accuracy
         for (int i = 0; i < m; i++)
         {
-            float error = (array_of_unknowns[i] - array_of_unknowns_last_iteration[i]) / array_of_unknowns[i];
-            if (error > 0.01)
+            float error = fabs(array_of_unknowns[i] - array_of_unknowns_last_iteration[i]) / array_of_unknowns[i];
+            if (error > 0.0001)
             {
                 break;
             }
